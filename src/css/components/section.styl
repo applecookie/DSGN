@@ -1,0 +1,26 @@
+@import "vars.styl"
+
+.section
+  margin 10px 10px 0
+
+  .section-title
+    margin-bottom 15px
+    font-weight 700
+    font-size 24px
+    border-bottom 3px solid black
+
+    .anchor
+      color lighten(content-color, 50%)
+      text-decoration none
+
+      &:hover
+        color content-color
+
+  .subsection
+    .subsection-title
+      margin-bottom 10px
+      font-weight 700
+      font-size 20px
+
+    + .subsection
+      margin-top 15px

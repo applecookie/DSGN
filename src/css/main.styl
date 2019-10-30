@@ -1,0 +1,51 @@
+@import "components/vars.styl"
+
+@import "components/left-menu.styl"
+@import "components/page.styl"
+@import "components/section.styl"
+@import "components/carousel.styl"
+
+html,
+body
+  height 100%
+
+body
+  margin 0
+  background-color rgba(0, 0, 0, .05)
+
+.content
+  height 100%
+
+  color content-color
+
+.left-menu
+  position fixed
+  width menu-width
+  height 100%
+
+.container
+  margin-left menu-width
+  padding-bottom 15px
+
+dfn
+  font-weight 700
+  font-style normal
+
+code
+  background-color content-color
+  color invert(content-color)
+  padding 2px 5px
+  border-radius 3px
+
+ol
+  margin 0
+
+  li
+    line-height 1.35em
+
+.alert
+  margin 5px 0
+  padding 5px 10px
+  border-radius 5px
+  background-color lighten(content-color, 30%)
+  color darken(invert(content-color), 10%)

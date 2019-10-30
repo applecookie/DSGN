@@ -1,0 +1,100 @@
+{{#> page home}}
+    {{#> section id="descr"}}
+        <p>
+            Репозиторий-шаблон для вёрстки с использованием <dfn>Stylus</dfn>, <dfn>Handlebars</dfn> и <dfn>ES6</dfn>. Призван
+            помочь быстро начать верстать любой проект в удобной среде с автообновлением
+            через <dfn>browser-sync</dfn>.
+        </p>
+    {{/section}}
+
+    {{#> section id="install"}}
+        {{#> subsection title="Общее"}}
+            <ol>
+                <li>Склонировать текущий репозиторий</li>
+                <li>
+                    Установить
+                    <a href="https://git-scm.com" target="_blank">Git-клиент</a>
+                </li>
+                <li>
+                    Установить
+                    <a href="https://nodejs.org" target="_blank">Node.js</a>
+                </li>
+                <li>
+                    Установить
+                    <a href="https://yarnpkg.com/en/docs/install" target="_blank">yarn</a>
+                    командой <code>npm i -g yarn</code> или любым другим способом из руководства
+                </li>
+                <li>Проверить установку командой <code>yarn --version</code>, иначе проверить системную переменную <dfn>PATH</dfn></li>
+                <li>
+                    Установить
+                    <a href="https://www.jetbrains.com/webstorm/download">WebStorm</a>
+                </li>
+                <li>В корневой папке выполнить <code>yarn</code></li>
+                <li>В корневой папке выполнить <code>yarn make</code></li>
+            </ol>
+        {{/subsection}}
+
+        {{#> subsection title="Команды"}}
+            <ol>
+                <li>Для инициализации репозитория выполнить <code>yarn make</code></li>
+                <li>Для запуска в корневой папке выполнить <code>yarn dev</code></li>
+                <li>Для сборки выполнить <code>yarn build</code></li>
+                <li>
+                    Для деплоя выполнить <code>yarn deploy</code>
+                    <div class="alert">
+                        Внимание! Деплой пока делается только через <dfn>git</dfn> или <dfn>folder</dfn> (в конкретную папку)!
+                        Не забудьте изменить путь до репозитория/папки в /.dev/deploy.json
+                    </div>
+                </li>
+            </ol>
+        {{/subsection}}
+    {{/section}}
+
+    {{#> section id="work"}}
+        {{#> subsection title="Структура папок"}}
+            <ol>
+                <li>src - исходные файлы</li>
+                <li>src/css - Stylus</li>
+                <li>src/css/vendor - стили сторонних библиотек</li>
+                <li>src/html - HTML-компоненты для страниц</li>
+                <li>src/html/data - data</li>
+                <li>src/html/helpers - Handlebars helpers</li>
+                <li>src/html/partials - Handlebars partials</li>
+                <li>src/html/decorators - Handlebars decorators</li>
+                <li>src/img - images</li>
+                <li>src/js - es6</li>
+                <li>src/js/vendor - скрипты сторонних библиотек</li>
+                <li>src/static - вся папка со всеми подпапками попадает в сборку без изменений</li>
+                <li>dist - сюда складываются dev-версия сайта для работы</li>
+                <li>dist/ - сюда складываются готовые шаблоны (с подставленными компонентами)</li>
+                <li>dist/css - собранные файлы стилей</li>
+                <li>dist/img - images</li>
+                <li>dist/js - js</li>
+                <li>build - сюда складываются production-сборка</li>
+                <li>.dev - здесь находятся системные файлы для работы SiteConveyer</li>
+                <li>.dev/deploy.json - это файл с настройкой куда производить deploy</li>
+            </ol>
+        {{/subsection}}
+
+        {{#> subsection title="Основной процесс"}}
+            <p>
+                После запуска порождается процесс, который следит за содержимым папки `/src`.
+                В случае обнаружения изменения в этой папке запускаются сборщики
+                страниц, стилей, картинок и скриптов, происходит обновление папки `/dist`.
+            </p>
+
+            <p>
+                При пересборке страниц, картинок и скриптов происходит перезагрузка страницы
+                в браузере, в то время как при пересборке стилей файл стилей заменяется на
+                странице прямо на лету.
+            </p>
+        {{/subsection}}
+    {{/section}}
+
+    {{#> section id="disclaimer"}}
+        <p>
+            За корявость написанного никакой ответственности нет. Продукт поставляется по
+            принципу as-is.
+        </p>
+    {{/section}}
+{{/page}}

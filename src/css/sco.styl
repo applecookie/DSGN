@@ -1,0 +1,52 @@
+overlay-background-color := rgba(0,0,0,0.95)
+overlay-color := white
+
+#site-conveyer-overlay
+  display none
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+  padding 5px 10px
+
+  background-color overlay-background-color
+  color overlay-color
+
+  &.__active
+    display block
+
+  > header
+    font-size 20px
+    font-weight 700
+    text-decoration underline
+    text-align center
+
+  .site-conveyer-overlay-errors
+    .site-conveyer-overlay-error
+      > header
+        display inline-block
+        padding 2px 8px
+        margin-bottom 10px
+        border-radius 5px
+        background-color rgba(255, 0, 0, 0.3)
+      > code
+        display block
+
+#site-conveyer-widget
+  position fixed
+  top 0
+  right 0
+  padding 2px 5px
+  border-bottom-left-radius 5px
+  background-color overlay-background-color
+  color overlay-color
+  cursor pointer
+
+  &:hover
+    color darken(overlay-color, 30%)
+
+  a
+    color inherit
+    text-decoration none

@@ -1,0 +1,39 @@
+@import "vars.styl"
+
+.carousel
+  width 100%
+  text-align center
+  position relative
+  user-select none
+
+  .slide
+    display inline-block
+
+  .prev
+    margin-left -(carousel-control-offset + carousel-control-size)
+
+  .next
+    margin-left carousel-control-offset
+
+  .prev,
+  .next
+    font-size carousel-control-font-size
+    position absolute
+    border 0
+    outline none
+    width carousel-control-size
+    height carousel-control-size
+    top "calc(50% - %s / 2)" % (carousel-control-font-size)
+    border-radius carousel-control-border-radius
+    background-color carousel-control-background-color
+    cursor pointer
+
+    &:hover
+      background-color lighten(carousel-control-background-color, 25%)
+
+  img
+    max-height 300px
+    display none
+
+    &.active
+      display inline

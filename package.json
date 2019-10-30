@@ -1,0 +1,42 @@
+{
+  "browserslist": [
+    ">= 5%"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
+    "browser-sync": "^2.26.7",
+    "chalk": "^2.4.2",
+    "del": "^5.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "git-push": "^0.1.1",
+    "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-hb": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0",
+    "rollup": "^1.21.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.1.1",
+    "socket.io": "^2.2.0",
+    "stylint": "^2.0.0"
+  },
+  "license": "ISC",
+  "name": "dsgn",
+  "scripts": {
+    "build": "gulp build --gulpfile ./.dev/gulpfile.js",
+    "deploy": "node ./.dev/lib/deploy.js",
+    "dev": "gulp --gulpfile ./.dev/gulpfile.js",
+    "lint": "",
+    "make": "rm -rf .git && git init && git add . && git commit -a -m \"Project inited by SiteConveyer v0.1.4\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1"
+}
