@@ -1,0 +1,39 @@
+.projects
+  $c-projects = $c-secondary
+
+  display flex
+  flex-wrap wrap
+
+  &__header
+    background-color $c-projects
+
+    &.section__header:after
+        background-color $c-projects
+
+  &__left
+    display flex
+    flex-wrap wrap
+    flex 1 1 69%
+
+    .project
+      height 33.5vw
+
+  &__right
+    display flex
+    flex 1 1 31%
+    flex-direction column
+
+  &__footer
+    display flex
+
+    flex 1 1 100%
+
+    .project
+      height 20vw
+
+  &__timeline
+    flex-basis 31%
+
+    color $c-text-white
+
+    background-color $c-projects

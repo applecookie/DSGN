@@ -1,0 +1,33 @@
+.filter
+  list-style none
+  padding-left 0
+
+  &__item
+
+    &._active
+      color #000
+
+      .arrow
+        opacity .9
+
+    a
+      position relative
+      padding-left 30px
+
+      color inherit
+      font-size 13px
+      font-weight 400
+      text-decoration none
+      text-transform uppercase
+
+      &:hover
+        .arrow
+          opacity 1
+
+  .arrow
+    position absolute
+    top 50%
+    left 0
+
+    opacity 0
+    transform translateY(-50%)

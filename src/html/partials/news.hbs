@@ -1,0 +1,12 @@
+<section class="news section">
+    <header class="section__header news__header">
+        <h2 class="section__title">news</h2>
+    </header>
+
+    <div class="news__articles">
+        {{#each news}}
+            {{> news__article data=this}}
+        {{/each}}
+    </div>
+
+</section>

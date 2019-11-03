@@ -1,0 +1,14 @@
+<article class="article news__article">
+    <header class="article__header">
+        <h4 class="article__title">{{title}}</h4>
+        <span class="article__date">{{date}}</span>
+    </header>
+
+    {{> picture class="article__img" img=img format=format}}
+
+    <p class="article__text">{{text}}</p>
+
+    <footer class="article__footer">
+        {{> btn text="read more"}}
+    </footer>
+</article>

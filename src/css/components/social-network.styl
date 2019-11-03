@@ -1,0 +1,32 @@
+.social-network
+  list-style none
+  margin 0
+  padding-left 0
+
+  display inline-flex
+
+  color $c-primary
+  font-size 18px
+
+  &._profile
+    color $c-accent-orange
+    font-size 12px
+
+  &__item
+    margin 0 .05em
+
+    a
+      display flex
+      align-items center
+      justify-content center
+      width 1.62em
+      height @width
+
+      color inherit
+      text-decoration none
+
+      border-radius 50%
+      transition $transition
+
+      &:hover
+        background-color darken($c-base-bg,5%)

@@ -1,0 +1,60 @@
+.arrow
+  $arrow-thickness = 1px
+  $arrow-staff = 19px
+  $arrow-pike = 11px
+  $arrow-color = $c-text-white
+  $arrow-deflection = 40deg
+
+  position relative
+  display inline-flex
+  align-items center
+  width $arrow-staff
+  height $arrow-pike * sin($arrow-deflection)
+
+  vertical-align middle
+
+  cursor pointer
+  transition $transition
+
+  &:hover
+
+    .arrow__icon
+
+      &:before
+        transform rotate($arrow-deflection - $arrow-deflection/4)
+
+      &:after
+        transform rotate(- $arrow-deflection + $arrow-deflection/4)
+
+  &__icon
+    position absolute
+    right 0
+    left @right
+    width 100%
+    height $arrow-thickness
+
+    background-color $arrow-color
+
+    transition inherit
+
+    &:before
+    &:after
+      content ''
+      display block
+      position absolute
+      right 0
+      width $arrow-pike
+      height $arrow-thickness
+
+      background-color inherit
+
+      transition inherit
+
+    &:before
+      transform-origin 100% 0
+      transform rotate($arrow-deflection)
+
+    &:after
+      transform-origin 100% 100%
+      transform rotate(- $arrow-deflection)
+

@@ -1,26 +1,41 @@
-@import "vars.styl"
-
 .section
-  margin 10px 10px 0
+  display flex
 
-  .section-title
-    margin-bottom 15px
-    font-weight 700
-    font-size 24px
-    border-bottom 3px solid black
+  &__header
+    position relative
+    display flex
+    flex-direction column
+    //width 465px
+    //height 502px
+    flex 0 0 31vw
+    height 33.5vw
 
-    .anchor
-      color lighten(content-color, 50%)
-      text-decoration none
+    color $c-text-white
 
-      &:hover
-        color content-color
+    &:before
+    &:after
+      content ''
+      position absolute
+      z-index -1
+      top 0
+      right @top
+      bottom @top
+      left @top
 
-  .subsection
-    .subsection-title
-      margin-bottom 10px
-      font-weight 700
-      font-size 20px
+    &:before
+      // bigger
+      clip-path polygon(0 0, calc(100% + 1px) 0, 0 calc(100% + 1px))
+      background-color $c-text-white
 
-    + .subsection
-      margin-top 15px
+    &:after
+      // smaller
+      clip-path polygon(0 0, calc(100% - 1px) 0, 0 calc(100% - 1px))
+
+  &__title
+    margin 0
+
+    // #fefefe
+    color darken($c-text-white, .5%)
+    font-size 48px
+    font-weight 400
+    text-transform uppercase

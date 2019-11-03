@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Mauris et dui sed justo placerat tristique.",
+    "date": "11.07.2014",
+    "img": "news-1",
+    "format": "jpg",
+    "text": "Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt."
+  },
+  {
+    "title": "Proin vehicula nibh massa",
+    "date": "11.06.2014",
+    "img": "news-2",
+    "format": "jpg",
+    "text": "Praesent non mauris nec orci scelerisque faucibus. Nulla ac varius est. Aenean auctor nisl elit, nec sollicitudin lectus iaculis sed. Maecenas aliquam ligula vitae pharetra scelerisque."
+  }
+]
