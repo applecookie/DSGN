@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Home",
+    "anchor": "home"
+  },
+  {
+    "title": "Projects",
+    "anchor": "projects"
+  },
+  {
+    "title": "Studio",
+    "anchor": "studio"
+  },
+  {
+    "title": "News",
+    "anchor": "news"
+  },
+  {
+    "title": "Contact",
+    "anchor": "contact"
+  }
+]

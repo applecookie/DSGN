@@ -3,15 +3,15 @@
 
   &__header
     position relative
-    display flex
-    flex-direction column
+    z-index 1
     //width 465px
     //height 502px
     flex 0 0 31vw
-    height 33.5vw
+    min-height 33.4vw
 
     color $c-text-white
 
+    // градиент "рванный" получается
     &:before
     &:after
       content ''
@@ -30,6 +30,7 @@
     &:after
       // smaller
       clip-path polygon(0 0, calc(100% - 1px) 0, 0 calc(100% - 1px))
+      background-color red
 
   &__title
     margin 0

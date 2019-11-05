@@ -1,10 +1,18 @@
-<header class="section header">
+<header class="section header" id="home">
     <div class="header__left project">
         {{> brand}}
         {{> social-network}}
     </div>
 
     <div class="header__right section__header">
-        {{> contacts}}
+        <div class="header__nav-wrap">
+            <button type="button" class="header__nav-toggle">
+                <span></span>
+            </button>
+
+            {{> header__nav}}
+        </div>
+
+        {{> contacts class="header__contacts"}}
     </div>
 </header>
